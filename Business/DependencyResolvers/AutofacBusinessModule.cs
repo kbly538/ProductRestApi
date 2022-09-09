@@ -14,7 +14,7 @@ namespace Business.DependencyResolvers
         protected override void Load(ContainerBuilder builder)
         {
             // Product
-            builder.RegisterType<ProductManager>().As<ICategoryService>();
+            builder.RegisterType<ProductManager>().As<IProductService>();
             builder.RegisterType<EntityFrameworkProductDal>().As<IProductDAL>();
             // Category
             builder.RegisterType<CategoryManager>().As<ICategoryService>();
